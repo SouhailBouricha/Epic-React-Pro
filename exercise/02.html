@@ -1,0 +1,16 @@
+<!-- Intro to raw React APIs -->
+<!-- http://localhost:3000/isolated/exercise/02.html -->
+
+<body>
+
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
+  <script type="module">
+    const span_1 = React.createElement("span",{ className : "span", children : "Hello"});
+    const span_2 = React.createElement("span",{ className : "span", children : "World"});
+    const reactElement = React.createElement("h1",{ className : "container", children : [span_1,span_2]});
+    const root = ReactDOM.createRoot(document.querySelector("#root"));
+    root.render(reactElement);
+  </script>
+</body>
